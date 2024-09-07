@@ -136,7 +136,7 @@ session_start();
                         echo '        <div><strong>Gender:</strong> ' . htmlspecialchars($row['Gender']) . '</div>';
                         echo '        <div><strong>Address:</strong> ' . htmlspecialchars($row['Address']) . '</div>';
                         echo '        <div><strong>Experience:</strong> ' . htmlspecialchars($row['Experience']) . ' years</div>';
-                        echo '        <div><strong>Department:</strong> ' . htmlspecialchars($row['DeptName']) . '</div>';
+                        // echo '        <div><strong>Department:</strong> ' . htmlspecialchars($row['DeptName']) . '</div>';
                         echo '        <div><strong>Working Hours:</strong> ' . htmlspecialchars($row['StartingTime']) . ' - ' . htmlspecialchars($row['EndingTime']) . '</div>';
                         echo '        <div><strong>Fee:</strong> $' . htmlspecialchars($row['Fee']) . '</div>';
                         echo '    </div>';

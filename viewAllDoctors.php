@@ -97,7 +97,7 @@ session_start();
             text-align: center;
         }
 
-        .card a:hover{
+        .card a:hover {
             background-color: #0056b3;
         }
     </style>
@@ -117,15 +117,9 @@ session_start();
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "SELECT doctor.*, Departments.DeptName, Hospitals.HospitalName 
+            $sql = "SELECT doctor.*
                     FROM doctor 
-                    INNER JOIN Departments ON doctor.DepartmentID = Departments.DeptID 
-                    INNER JOIN Hospitals ON doctor.HospitalID = Hospitals.HospitalID 
                     WHERE 1=1";
-
-            if ($dept_filter != "") {
-                $sql .= " AND Departments.DeptID = " . $conn->real_escape_string($dept_filter);
-            }
 
             if ($city_filter != "") {
                 $sql .= " AND City = '" . $conn->real_escape_string($city_filter) . "'";
@@ -153,8 +147,6 @@ session_start();
                     echo '            <div><strong>Gender:</strong> ' . htmlspecialchars($row['Gender']) . '</div>';
                     echo '            <div><strong>Address:</strong> ' . htmlspecialchars($row['Address']) . '</div>';
                     echo '            <div><strong>Experience:</strong> ' . htmlspecialchars($row['Experience']) . ' years</div>';
-                    echo '            <div><strong>Department:</strong> ' . htmlspecialchars($row['DeptName']) . '</div>';
-                    echo '            <div><strong>Hospital:</strong> ' . htmlspecialchars($row['HospitalName']) . '</div>';
                     echo '            <div><strong>Working Hours:</strong> ' . htmlspecialchars($row['StartingTime']) . ' - ' . htmlspecialchars($row['EndingTime']) . '</div>';
                     echo '            <div><strong>Fee:</strong> $' . htmlspecialchars($row['Fee']) . '</div>';
                     echo '        </div>';

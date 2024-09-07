@@ -72,7 +72,6 @@
                     </label>
                 </div>
 
-
                 <p class="smallHeading">Professional Info</p>
                 <div class="sectionWrapper">
                     <div class="rightSection">
@@ -81,39 +80,7 @@
                                 <input required placeholder="Years of Experience" type="number" class="input"
                                     name="experience">
                             </label>
-
-                            <!-- Display Departments -->
-                            <label for="department">
-                                <select name="department" id="department">
-                                    <option value="" disabled selected>Department</option>
-                                    <?php
-                                    include 'phpHeader.php';
-                                    // Fetch departments from the database
-                                    $queryDepartments = "SELECT * FROM departments";
-                                    $resultDepartments = mysqli_query($conn, $queryDepartments);
-                                    while ($row = mysqli_fetch_assoc($resultDepartments)) {
-                                        echo "<option value='" . $row['DeptID'] . "'>" . $row['DeptName'] . "</option>";
-                                        // echo "<option value='". $row['DeptName'] . "'</option>";
-                                    }
-                                    ?>
-                                </select>
-                            </label>
-
                         </div>
-                        <label for="hospital">
-                            <select name="hospital" id="hospital">
-                                <option value="" disabled selected>Hospital</option>
-                                <?php
-                                include 'phpHeader.php';
-                                // Fetch hospitals from the database
-                                $queryHospitals = "SELECT * FROM hospitals";
-                                $resultHospitals = mysqli_query($conn, $queryHospitals);
-                                while ($row = mysqli_fetch_assoc($resultHospitals)) {
-                                    echo "<option value='" . $row['HospitalID'] . "'>" . $row['HospitalName'] . "</option>";
-                                }
-                                ?>
-                            </select>
-                        </label>
                     </div>
 
                     <div class="leftSection">
