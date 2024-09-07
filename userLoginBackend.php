@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
         if ($password == $row['password']) {
             // Password is correct, login successful
+            $_SESSION['userId']=$row['userId'];
             header("Location: viewAllDoctors.php");
             exit();
         } else {

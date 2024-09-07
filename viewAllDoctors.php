@@ -2,6 +2,7 @@
 // doctors.php
 include 'phpHeader.php';
 session_start();
+
 ?>
 
 <!DOCTYPE html>
