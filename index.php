@@ -23,17 +23,6 @@
                     <h1 class="MainHeading">Find the <span>Best Doctor</span> Near You...</h1>
                     <p class="mainPara">We take care of your health, over 1000 doctor & specialist available online</p>
                 </div>
-                <div class="formContainer">
-                    <form id="locationdetection" class="mainform">
-                        <input type="text" name="loaction" id="location" placeholder="Enter your city">
-                        <button id="detectLocation" class="MainButton detect">Detect</button>
-                    </form>
-                    <form id="SearchDoctor" class="mainform">
-                        <input type="text" name="loaction" id="location"
-                            placeholder="Search for doctors, hospitals, & specialities">
-                        <button id="detectLocation" class="MainButton">Search</button>
-                    </form>
-                </div>
                 <div class="homepageImgConatiner">
                     <div class="homepage_img">
                         <img src="./resources/doctoroncall.png" alt="">

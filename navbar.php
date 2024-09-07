@@ -11,8 +11,6 @@
             <ul>
                 <li><a href="#">About</a></li>
                 <li><a href="viewAllDoctors.php">Doctors</a></li>
-                <li><a href="#">Labortires</a></li>
-                <li><a href="hospitals.php">Hospitals</a></li>
             </ul>
         </div>
         <div class="navButtons">

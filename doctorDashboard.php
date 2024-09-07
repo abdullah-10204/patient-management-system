@@ -69,6 +69,10 @@ $conn->close();
         th {
             background-color: #f2f2f2;
         }
+
+        button{
+            padding: 5px 10px;
+        }
     </style>
 </head>
 
@@ -83,6 +87,8 @@ $conn->close();
                     <th>Time</th>
                     <th>Patient Name</th>
                     <th>Contact Info</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -97,6 +103,8 @@ $conn->close();
                             <td><?php echo htmlspecialchars($appointment['appointment_time']); ?></td>
                             <td><?php echo htmlspecialchars($appointment['patient_name']); ?></td>
                             <td><?php echo htmlspecialchars($appointment['patient_contact']); ?></td>
+                            <td class="center"><button>Accept</button></td>
+                            <td class=""><button>Reject</button></td>
                         </tr>
                     <?php endforeach; ?>
                 <?php endif; ?>
