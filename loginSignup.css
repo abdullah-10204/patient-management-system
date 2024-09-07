@@ -1,0 +1,203 @@
+@import url('./style.css');
+
+
+main {
+    margin-top: 4rem;
+    height: 100%;
+    flex-direction: row-reverse;
+    /* border: 1px solid red; */
+    padding: 0 2rem;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    gap: 2rem;
+    position: relative;
+}
+
+.img {
+    width: 30%;
+    height: 100%;
+    transform: rotateY(180deg);
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.formContainer {
+    width: 70%;
+    height: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 450px;
+    border-radius: 5px;
+    background-color: var(--sub-color);
+    padding: 1.5rem;
+    /* background: url('./resources/mainBackground.webp'); */
+}
+
+
+.button-submit {
+    margin: 20px 0 10px 0;
+    background-color: var(--main-color);
+    border: none;
+    color: var(--sub-color);
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.button-submit:hover {
+    background-color: #0056b3;
+}
+
+
+.title {
+    font-size: 28px;
+    color: var(--main-color);
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.title::before,
+.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: var(--main-color);
+}
+
+.title::before {
+    width: 18px;
+    height: 18px;
+    background-color: var(--main-color);
+}
+
+.title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+
+.message,
+.signin {
+    color: var(--light-color);
+    font-size: 14px;
+}
+
+.signin {
+    text-align: center;
+}
+
+.signin a {
+    color: var(--main-color);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.2rem;
+}
+
+label {
+    width: 100%;
+}
+
+.input, select {
+    width: 100%;
+    padding: 12px;
+    outline: 0;
+    border: none;
+    border-radius: 5px;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+.doctorForm{
+    width: 70%;
+}
+
+.doctorForm form{
+    width: 100%;
+    /* padding: 1rem; */
+    margin-bottom: 1rem;
+}
+
+.main{
+    height: min-content;
+}
+
+.main .img{
+    width: 40%;
+}
+
+.sectionWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.2rem;
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--light-color);
+    background-color: var(--main-color);
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.sectionWrapper > div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 0.2rem;
+}
+
+.leftSection, .rightSection{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+select{
+    color: var(--light-color);
+}
+
+
+.smallHeading{
+    text-align: left;
+    line-height: 1rem;
+    color: var(--light-color);
+}
